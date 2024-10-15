@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil avec Animations</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323:wght@400&display=swap" rel="stylesheet">
+  <audio id="myAudio" autoplay loop>
+    <source src="strauss.mp3" type="audio/mpeg">
+  </audio>
+</head>
+<body>
+  <header>
+    <div id="header-container">
+      <img id="monGif" src="terre.gif" alt="DESCRIPTION_DU_GIF">
+      <div id="center-content">
+        <div id="logo">C R I S T O R A M A</div>
+        <nav>
+          <ul>
+            <li>En savoir plus</li>
+            <li>Contact</li>
+            <li id="muteButton">Mute Music</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div id="animation-container">
+    <div id="texte1" class="hidden"></div>
+    <div id="texte2" class="hidden"></div>
+    <div id="fenetre-dialogue" class="hidden">
+      <div id="entete">
+        <span id="nom-utilisateur-conteneur">
+          <span id="nom-utilisateur">Chat avec mon moi virtuel</span>
+        </span>
+        <div id="boutons">
+          <span class="bouton">-</span>
+          <span class="bouton">x</span>
+        </div>
+      </div>
+      <div id="contenu">
+        <div id="chat">
+          <div id="chat2">
+            <div id="terminal">
+              <div id="historique"></div>
+             <div id="boutons-container">
+  <button class="btn-action" data-command="bio">Bio</button>
+  <button class="btn-action" data-command="formations">Formations</button>
+  <button class="btn-action" data-command="expériences">Expériences</button>
+  <button class="btn-action" data-command="compétences">Compétences</button>
+  <button class="btn-action" data-command="cool">Cool</button>
+  <button class="btn-action" data-command="passions">Passions</button>
+  <button class="btn-action" data-command="contact">Contact</button>
+  <button class="btn-action" data-command="autres">Autres</button>
+  <button class="btn-action" data-command="aide">Aide</button>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
