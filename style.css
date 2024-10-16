@@ -27,7 +27,7 @@ header {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 10px; /* Ajoutez cette ligne pour déplacer le header vers le bas */
   left: 0;
   z-index: 1000; /* Ensure the header is above other content */
 }
@@ -113,7 +113,7 @@ nav ul li {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   width: 70%;
   height: 70%;
-  margin-top: 100px;
+  margin-top: 60px; /* Réduisez cette valeur pour rapprocher la fenêtre du header */
   margin-left: auto;
   margin-right: auto;
 }
@@ -279,7 +279,7 @@ height: 80%;
   #fenetre-dialogue {
     width: 95%; /* Élargissement de la fenêtre de dialogue */
     height: 80%; /* Ajustement de la hauteur */
-    margin-top: 80px; /* Réduction de la marge supérieure */
+    margin-top: 80px; /* Ajustez cette valeur pour la plage 480px-768px */
   }
 
   #historique {
@@ -343,6 +343,10 @@ height: 80%;
     width: 90%; /* Réduisez légèrement la largeur */
     margin-top: 120px; /* Augmentez la marge supérieure */
   }
+
+  header {
+    top: 5px; /* Ajustez la valeur pour les écrans plus petits si nécessaire */
+  }
 }
 
 /* Pour les très petits écrans */
@@ -362,6 +366,14 @@ height: 80%;
 
   #fenetre-dialogue {
     width: 98%;
+    margin-top: 60px; /* Augmentez légèrement pour les écrans de 480px */
+  }
+}
+
+/* Nouvelle media query pour la plage 480px-768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  #fenetre-dialogue {
+    margin-top: 70px; /* Ajustez cette valeur selon vos préférences */
   }
 }
 
@@ -409,7 +421,7 @@ height: 80%;
   }
 
   #fenetre-dialogue {
-    width: 95%; /* Augmentez légèrement la largeur */
-    margin-top: 100px; /* Ajustez la marge supérieure */
+    width: 95%;
+    margin-top: 30px; /* Réduisez au maximum pour les écrans les plus petits */
   }
 }
