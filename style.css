@@ -576,109 +576,40 @@ height: 80%;
 @media (max-width: 770px), (max-height: 950px) {
   #fenetre-dialogue {
     width: 90%;
-    height: 80%; /* Maintient la hauteur à 80% de l'espace disponible */
-    margin-top: 20px; /* Réduit l'espace entre le header et la boîte de dialogue de 100px */
-  }
-
-  #animation-container {
-    margin-top: 10px; /* Réduit également la marge supérieure du conteneur d'animation */
+    height: 75%; /* Réduit de 80% à 75% */
+    margin-top: 15px; /* Réduit la marge supérieure */
   }
 
   #chat2 {
-    height: 75%; /* Ajuste la hauteur du chat pour s'adapter à la nouvelle taille */
+    height: 70%; /* Ajuste la hauteur du chat */
   }
 
   #terminal {
-    height: 65vh; /* Ajuste la hauteur du terminal */
+    height: 60vh; /* Ajuste la hauteur du terminal */
   }
 
-  /* Ajustements pour le header */
-  header {
-    padding: 5px 0;
+  #animation-container {
+    margin-top: 5px; /* Réduit la marge supérieure */
   }
 
-  #logo {
-    font-size: 24px;
-  }
-
-  nav ul li {
-    font-size: 14px;
-    margin: 0 5px;
+  body {
+    padding-top: 10px; /* Réduit le padding supérieur du body */
   }
 }
 
 /* Ajustements supplémentaires pour les écrans très étroits */
 @media (max-width: 480px) {
   #fenetre-dialogue {
-    width: 95%;
-    height: 85%;
-    margin-top: 15px;
+    height: 70%; /* Réduit encore plus pour les très petits écrans */
+    margin-top: 10px;
   }
 
   #chat2 {
-    height: 80%;
+    height: 65%;
   }
 
   #terminal {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 770px), (max-height: 950px) {
-  body {
-    padding-top: 20px; /* Ajoute de l'espace au-dessus du header */
-  }
-
-  header {
-    padding: 15px 0; /* Augmente légèrement le padding vertical du header */
-  }
-
-  #fenetre-dialogue {
-    width: 90%;
-    height: 80%;
-    margin-top: 20px;
-  }
-
-  #animation-container {
-    margin-top: 30px; /* Augmente légèrement la marge supérieure */
-  }
-
-  #logo {
-    font-size: 24px;
-  }
-
-  nav ul li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-
-  #chat2 {
-    height: 75%;
-  }
-
-  #terminal {
-    height: 65vh;
-  }
-}
-
-/* Ajustements supplémentaires pour les écrans très étroits */
-@media (max-width: 480px) {
-  body {
-    padding-top: 15px; /* Réduit légèrement l'espace pour les très petits écrans */
-  }
-
-  #fenetre-dialogue {
-    width: 95%;
-    height: 85%;
-    margin-top: 15px;
-  }
-
-  #chat2 {
-    height: 80%;
-  }
-
-  #terminal {
-    height: 70vh;
+    height: 55vh;
   }
 }
 
@@ -808,4 +739,44 @@ body {
   line-height: 1.2; /* Réduit l'interlignage pour le chat et l'historique */
   margin-bottom: 0.3em; /* Réduit l'espace entre les paragraphes */
 }
+
 /* Ajustements pour les écrans en dessous de 770x950px */
+@media (max-width: 770px), (max-height: 950px) {
+  body {
+    font-size: 17px;
+  }
+
+  #texte1, #texte2 {
+    font-size: 22px;
+  }
+
+  #logo {
+    font-size: 26px;
+  }
+
+  nav ul li {
+    font-size: 15px;
+  }
+
+  #fenetre-dialogue {
+    font-size: 17px;
+  }
+
+  #terminal, #historique, #historique p {
+    font-size: 16px;
+    line-height: 1.1; /* Réduit encore plus l'interlignage pour le chat et l'historique sur petits écrans */
+    margin-bottom: 0.2em; /* Réduit davantage l'espace entre les paragraphes */
+  }
+
+  .btn-action {
+    font-size: 15px;
+  }
+}
+
+/* Ajustement supplémentaire pour les très petits écrans */
+@media (max-width: 480px) {
+  #terminal, #historique, #historique p {
+    line-height: 1; /* Réduit au maximum l'interlignage pour les très petits écrans */
+    margin-bottom: 0.1em; /* Réduit au minimum l'espace entre les paragraphes */
+  }
+}
