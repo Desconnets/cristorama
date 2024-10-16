@@ -165,10 +165,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const muteButton = document.getElementById("muteButton");
   audio.volume = 0.1;
 
+  // Ajout d'une fonction pour jouer l'audio
+  function playAudio() {
+    audio.play().catch(error => {
+      console.log("Lecture automatique impossible :", error);
+    });
+  }
+
+  // Tentative de lecture automatique
+  playAudio();
+
+  // Ajout d'un événement pour jouer l'audio lors du premier clic sur la page
+  document.addEventListener('click', function onFirstClick() {
+    playAudio();
+    document.removeEventListener('click', onFirstClick);
+  }, { once: true });
+
   muteButton.addEventListener("click", function () {
     if (audio.muted) {
       audio.muted = false;
       muteButton.textContent = "Mute Music";
+      playAudio(); // Tente de jouer l'audio quand on démute
     } else {
       audio.muted = true;
       muteButton.textContent = "Unmute Music";
