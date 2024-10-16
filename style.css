@@ -266,12 +266,75 @@ height: 80%;
 /* styles.css */
 
 @media (max-width: 768px) {
-  #historique {
-    font-size: 10px;
-    line-height: 11px;
+  body {
+    font-size: 18px; /* Augmentation de la taille de base du texte */
   }
+
+  #logo {
+    font-size: 28px; /* Réduction légère de la taille du logo */
+  }
+
   #fenetre-dialogue {
-    width: 85%;
+    width: 95%; /* Élargissement de la fenêtre de dialogue */
+    height: 80%; /* Ajustement de la hauteur */
+    margin-top: 80px; /* Réduction de la marge supérieure */
+  }
+
+  #historique {
+    font-size: 16px; /* Augmentation de la taille du texte dans l'historique */
+    line-height: 1.4; /* Ajustement de l'interligne */
+  }
+
+  #chat2 {
+    height: 70%; /* Ajustement de la hauteur du chat */
+  }
+
+  #terminal {
+    height: 50vh; /* Ajustement de la hauteur du terminal */
+  }
+
+  .btn-action {
+    font-size: 16px; /* Augmentation de la taille du texte des boutons */
+    padding: 10px; /* Augmentation du padding pour une meilleure zone de clic */
+  }
+
+  #texte1, #texte2 {
+    padding: 5%; /* Réduction du padding pour les textes */
+    font-size: 20px; /* Augmentation de la taille du texte */
+  }
+
+  #monGif {
+    max-width: 60px; /* Réduction de la taille du GIF */
+    margin-right: 15px; /* Réduction de l'espace */
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* Permet aux éléments du menu de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments du menu */
+  }
+
+  nav ul li {
+    margin: 5px; /* Réduction des marges entre les éléments du menu */
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  #logo {
+    font-size: 24px;
+  }
+
+  .btn-action {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #fenetre-dialogue {
+    width: 98%;
   }
 }
 
