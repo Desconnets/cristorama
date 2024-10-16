@@ -17,6 +17,8 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-size: 16px; /* Taille de base légèrement augmentée */
+  line-height: 1.4; /* Interlignage de base réduit */
 }
 
 header {
@@ -26,10 +28,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 10px; /* Ajoutez cette ligne pour déplacer le header vers le bas */
+  position: static; /* Changé de 'fixed' à 'static' */
+  top: 10px;
   left: 0;
-  z-index: 1000; /* Ensure the header is above other content */
+  z-index: 1000;
 }
 
 #header-container {
@@ -74,19 +76,48 @@ nav ul li {
   max-width: 1000px;
   margin: 20px auto;
   text-align: center;
-  margin-top: 80px; /* Add margin to account for fixed header height */
+  margin-top: 20px; /* Réduit de 140px à 20px car le header n'est plus fixe */
+}
+
+@media screen and (max-width: 992px) {
+  #animation-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #animation-container {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #animation-container {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  #animation-container {
+    width: 95%;
+    margin-top: 60px;
+  }
 }
 
 #texte1 {
   padding: 10%;
   margin: 20px auto;
   text-align: center;
+  font-size: 20px; /* Taille de base augmentée pour texte1 et texte2 */
+  line-height: 1.3; /* Interlignage réduit pour texte1 et texte2 */
 }
 
 #texte2 {
   padding: 10%;
   margin: 20px auto;
   text-align: center;
+  font-size: 20px; /* Taille de base augmentée pour texte1 et texte2 */
+  line-height: 1.3; /* Interlignage réduit pour texte1 et texte2 */
 }
 
 .hidden {
@@ -113,7 +144,7 @@ nav ul li {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   width: 70%;
   height: 70%;
-  margin-top: 60px; /* Réduisez cette valeur pour rapprocher la fenêtre du header */
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -277,9 +308,9 @@ height: 80%;
   }
 
   #fenetre-dialogue {
-    width: 95%; /* Élargissement de la fenêtre de dialogue */
-    height: 80%; /* Ajustement de la hauteur */
-    margin-top: 80px; /* Ajustez cette valeur pour la plage 480px-768px */
+    width: 90%;
+    height: 70%; /* Réduit de 80% à 70% */
+    margin-top: 15px; /* Réduit de 20px à 15px */
   }
 
   #historique {
@@ -288,11 +319,11 @@ height: 80%;
   }
 
   #chat2 {
-    height: 70%; /* Ajustement de la hauteur du chat */
+    height: 75%; /* Ajuste la hauteur du chat */
   }
 
   #terminal {
-    height: 50vh; /* Ajustement de la hauteur du terminal */
+    height: 60vh; /* Ajuste la hauteur du terminal */
   }
 
   .btn-action {
@@ -326,7 +357,7 @@ height: 80%;
 
   #animation-container {
     width: 90%; /* Réduisez la largeur pour éviter le débordement */
-    margin-top: 100px; /* Augmentez la marge supérieure */
+     /* Augmentez la marge supérieure */
   }
 
   #fenetre-dialogue {
@@ -366,7 +397,8 @@ height: 80%;
 
   #fenetre-dialogue {
     width: 98%;
-    margin-top: 60px; /* Augmentez légèrement pour les écrans de 480px */
+    height: 75%; /* Réduit de 85% à 75% */
+    margin-top: 10px; /* Réduit de 15px à 10px */
   }
 }
 
@@ -421,7 +453,359 @@ height: 80%;
   }
 
   #fenetre-dialogue {
-    width: 95%;
-    margin-top: 30px; /* Réduisez au maximum pour les écrans les plus petits */
+    width: 98%;
+    height: 80%; /* Réduit de 88% à 80% */
+    margin-top: 5px; /* Réduit de 10px à 5px */
   }
 }
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222; /* Couleur de fond initiale */
+  z-index: 1000;
+  font-family: "VT323", monospace; /* Typographie initiale */
+  color: #77ff77; /* Couleur du texte initiale */
+}
+
+.hidden {
+  display: none;
+}
+
+#introGif {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+#introTitle {
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+#startButton {
+  font-size: 2em;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #77ff77;
+  border: 2px solid #77ff77;
+  font-family: "VT323", monospace;
+  cursor: pointer;
+}
+
+#startButton:hover {
+  background-color: #66cc66;
+}
+
+#texte1, #texte2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  text-align: left; /* Changé de 'center' à 'left' */
+  width: 80%;
+  max-width: 800px;
+  white-space: pre-wrap; /* Pour préserver les sauts de ligne */
+  height: auto; /* Hauteur automatique */
+  overflow: hidden; /* Cache le texte qui dépasse */
+}
+
+#fenetre-dialogue {
+  border: 3px solid #77ff77;
+  border-radius: 5px;
+  background-color: #222;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  height: 70%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  #fenetre-dialogue {
+    width: 90%;
+    height: 85%; /* Augmenté de 80% à 85% */
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  #fenetre-dialogue {
+    width: 98%;
+    height: 90%; /* Augmenté à 90% pour les très petits écrans */
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  #fenetre-dialogue {
+    width: 95%;
+    height: 95%; /* Encore plus grand pour les écrans les plus petits */
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #terminal {
+    height: 70vh; /* Augmentez la hauteur du terminal */
+  }
+  
+  #chat2 {
+    height: 85%; /* Ajustez la hauteur du chat */
+  }
+}
+
+@media (max-width: 480px) {
+  #terminal {
+    height: 75vh;
+  }
+  
+  #chat2 {
+    height: 90%;
+  }
+}
+
+@media (max-width: 770px), (max-height: 950px) {
+  #fenetre-dialogue {
+    width: 90%;
+    height: 80%; /* Maintient la hauteur à 80% de l'espace disponible */
+    margin-top: 20px; /* Réduit l'espace entre le header et la boîte de dialogue de 100px */
+  }
+
+  #animation-container {
+    margin-top: 10px; /* Réduit également la marge supérieure du conteneur d'animation */
+  }
+
+  #chat2 {
+    height: 75%; /* Ajuste la hauteur du chat pour s'adapter à la nouvelle taille */
+  }
+
+  #terminal {
+    height: 65vh; /* Ajuste la hauteur du terminal */
+  }
+
+  /* Ajustements pour le header */
+  header {
+    padding: 5px 0;
+  }
+
+  #logo {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+/* Ajustements supplémentaires pour les écrans très étroits */
+@media (max-width: 480px) {
+  #fenetre-dialogue {
+    width: 95%;
+    height: 85%;
+    margin-top: 15px;
+  }
+
+  #chat2 {
+    height: 80%;
+  }
+
+  #terminal {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 770px), (max-height: 950px) {
+  body {
+    padding-top: 20px; /* Ajoute de l'espace au-dessus du header */
+  }
+
+  header {
+    padding: 15px 0; /* Augmente légèrement le padding vertical du header */
+  }
+
+  #fenetre-dialogue {
+    width: 90%;
+    height: 80%;
+    margin-top: 20px;
+  }
+
+  #animation-container {
+    margin-top: 30px; /* Augmente légèrement la marge supérieure */
+  }
+
+  #logo {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  #chat2 {
+    height: 75%;
+  }
+
+  #terminal {
+    height: 65vh;
+  }
+}
+
+/* Ajustements supplémentaires pour les écrans très étroits */
+@media (max-width: 480px) {
+  body {
+    padding-top: 15px; /* Réduit légèrement l'espace pour les très petits écrans */
+  }
+
+  #fenetre-dialogue {
+    width: 95%;
+    height: 85%;
+    margin-top: 15px;
+  }
+
+  #chat2 {
+    height: 80%;
+  }
+
+  #terminal {
+    height: 70vh;
+  }
+}
+
+/* Styles de base pour texte1 et texte2 */
+#texte1, #texte2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  text-align: left;
+  width: 80%;
+  max-width: 800px;
+  white-space: pre-wrap;
+  height: auto;
+  overflow: hidden;
+  font-size: 18px; /* Taille de base pour les petits écrans */
+}
+
+/* Augmentation de la taille des polices pour les grands écrans */
+@media (min-width: 771px) and (min-height: 951px) {
+  body {
+    font-size: 18px; /* Taille de base du texte augmentée */
+  }
+
+  #texte1, #texte2 {
+    font-size: 24px; /* Taille augmentée pour texte1 et texte2 */
+  }
+
+  #logo {
+    font-size: 40px; /* Taille du logo augmentée */
+  }
+
+  nav ul li {
+    font-size: 20px; /* Taille du texte du menu augmentée */
+  }
+
+  #fenetre-dialogue {
+    font-size: 20px; /* Taille du texte dans la boîte de dialogue augmentée */
+  }
+
+  #terminal {
+    font-size: 18px; /* Taille du texte dans le terminal augmentée */
+  }
+
+  .btn-action {
+    font-size: 18px; /* Taille du texte des boutons augmentée */
+  }
+}
+
+/* Ajustements pour les écrans très larges */
+@media (min-width: 1200px) {
+  #texte1, #texte2 {
+    font-size: 28px; /* Taille encore plus grande pour les très grands écrans */
+  }
+
+  body {
+    font-size: 20px;
+  }
+
+  #logo {
+    font-size: 44px;
+  }
+
+  nav ul li {
+    font-size: 22px;
+  }
+
+  #fenetre-dialogue {
+    font-size: 22px;
+  }
+
+  #terminal {
+    font-size: 20px;
+  }
+
+  .btn-action {
+    font-size: 20px;
+  }
+}
+
+/* Ajustements pour les écrans en dessous de 770x950px */
+@media (max-width: 770px), (max-height: 950px) {
+  body {
+    font-size: 17px; /* Légère augmentation de la taille de base */
+    line-height: 1.3; /* Réduction de l'interlignage */
+  }
+
+  #texte1, #texte2 {
+    font-size: 22px; /* Taille augmentée pour texte1 et texte2 */
+    line-height: 1.2; /* Interlignage réduit pour texte1 et texte2 */
+  }
+
+  #logo {
+    font-size: 26px; /* Légère augmentation */
+  }
+
+  nav ul li {
+    font-size: 15px; /* Légère augmentation */
+  }
+
+  #fenetre-dialogue {
+    font-size: 17px; /* Légère augmentation */
+  }
+
+  #terminal {
+    font-size: 16px; /* Légère augmentation */
+    line-height: 1.3; /* Réduction de l'interlignage */
+  }
+
+  .btn-action {
+    font-size: 15px; /* Légère augmentation */
+  }
+}
+
+/* Styles de base */
+body {
+  font-size: 16px;
+}
+
+#texte1, #texte2 {
+  font-size: 20px;
+}
+
+/* Styles spécifiques pour le chat et l'historique */
+#chat2, #terminal, #historique, #historique p {
+  line-height: 1.2; /* Réduit l'interlignage pour le chat et l'historique */
+  margin-bottom: 0.3em; /* Réduit l'espace entre les paragraphes */
+}
+/* Ajustements pour les écrans en dessous de 770x950px */
