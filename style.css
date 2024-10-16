@@ -1,7 +1,9 @@
 /* styles.css */
-html {
-  min-width: 420px;
-  min-height: 600px;
+html, body {
+  min-width: 320px; /* Réduisez la largeur minimale */
+  min-height: 100vh; /* Utilisez 100vh au lieu d'une valeur fixe */
+  width: 100%; /* Assurez-vous que le body prend toute la largeur */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 body {
@@ -13,8 +15,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 420px;
-  min-height: 600px;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 header {
@@ -301,6 +303,8 @@ height: 80%;
   #texte1, #texte2 {
     padding: 5%; /* Réduction du padding pour les textes */
     font-size: 20px; /* Augmentation de la taille du texte */
+    width: 90%; /* Limitez la largeur */
+    margin: 10px auto; /* Centrez et ajoutez des marges */
   }
 
   #monGif {
@@ -311,10 +315,33 @@ height: 80%;
   nav ul {
     flex-wrap: wrap; /* Permet aux éléments du menu de passer à la ligne si nécessaire */
     justify-content: center; /* Centre les éléments du menu */
+    gap: 5px; /* Réduisez l'espace entre les éléments du menu */
   }
 
   nav ul li {
     margin: 5px; /* Réduction des marges entre les éléments du menu */
+    font-size: 14px; /* Réduction de la taille du texte du menu */
+    margin: 2px; /* Réduisez les marges */
+  }
+
+  #animation-container {
+    width: 90%; /* Réduisez la largeur pour éviter le débordement */
+    margin-top: 100px; /* Augmentez la marge supérieure */
+  }
+
+  #fenetre-dialogue {
+    width: 90%; /* Réduisez légèrement la largeur */
+    margin-top: 120px; /* Augmentez la marge supérieure */
+  }
+
+  #animation-container {
+    width: 90%; /* Réduisez la largeur pour éviter le débordement */
+    margin-top: 100px; /* Augmentez la marge supérieure */
+  }
+
+  #fenetre-dialogue {
+    width: 90%; /* Réduisez légèrement la largeur */
+    margin-top: 120px; /* Augmentez la marge supérieure */
   }
 }
 
@@ -365,4 +392,24 @@ height: 80%;
 #contenu {
   overflow-y: auto; /* Permet le défilement si nécessaire */
   height: calc(100% - 50px); /* Ajuste la hauteur pour les boutons */
+}
+
+/* Ajoutez ces règles pour les très petits écrans */
+@media (max-width: 360px) {
+  html, body {
+    min-width: 300px; /* Réduisez encore la largeur minimale */
+  }
+
+  #logo {
+    font-size: 20px; /* Réduisez encore la taille du logo */
+  }
+
+  nav ul li {
+    font-size: 12px; /* Réduisez encore la taille du texte du menu */
+  }
+
+  #fenetre-dialogue {
+    width: 95%; /* Augmentez légèrement la largeur */
+    margin-top: 100px; /* Ajustez la marge supérieure */
+  }
 }
