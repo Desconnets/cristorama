@@ -99,17 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     welcome:
       "\nBonjour à vous, je suis heureux de pouvoir parler avec vous, je vous écris depuis le passé. Pour être exact, il est onze heures du matin et nous sommes samedi premier juin 2024. \n \nBref, revenons à l’essentiel : l’I.N.F.O.R.M.A.T.I.O.N. \n \nÀ travers ce chat, on pourra converser par le biais de mots clés que j’ai rédigé et qui vont vous donner des informations sur moi !\n \nVoici les mots-clés, rien de plus simple : clickez sur les mots clés :\n\nBio : une présentation express qui me présente.\nFormations : tout savoir sur mon parcours scolaire !\nExpériences : toutes mes expériences professionnelles.\nCompétences : pour connaître mes skills, mes stats !\nCool : mes projets pro perso, asso, radio et freelancing !\nPassions : ici, je vous dis qui je suis vraiment.\nContact : pour me parler au présent.\nAutres : des surprises et autres infos cool.",
     commands: {
-      info: "Affiche des informations importantes.",
-      aide: {
-        description: "Affiche la liste des commandes disponibles.",
-        options: [
-          { command: "Formations", alias: ["école"], description: "Connaître mon parcours scolaire" },
-          { command: "qui", description: "une description rapide de ma personne" },
-          { command: "CV", description: "Une description rapide de mes jobs" },
-          { command: "projets", description: "Les projets cool que j'ai réalisés" },
-        ],
-      },
-      formations:  "Fac de sciences puis fac de lettre \n - 2011 : bac sciences \n - 2016 : licence sciences du langage \n - 2018 : master 1 humanités numériques",
+      agence: "Brandie est une agence de communication basée à Montpellier, dans le sud de la France ! Chez Brandie depuis 2021, j’ai développé des connaissances solides de LinkedIn et je travaille avec des clients variés, autant dans le privé que dans le public, surtout dans l’ingénierie et la culture. Mes missions incluent l’écriture, la création de contenus audiovisuels, la publication de posts sur les réseaux sociaux, l'élaboration de stratégies digitales, le conseil et l’analyse de performances, entre autres. ",
+      formations:  "Fac de sciences puis fac de lettres \n - 2011 : bac sciences \n - 2016 : licence sciences du langage \n - 2018 : master 1 humanités numériques",
       bio: "Né pendant le boom internet et issu de la génération Game boy, eMule, iPod et Skyblog, je suis un passionné de pop-culture, de sciences et des techs rétro. Aujourd'hui, fort de mes sept ans d’expérience en social media management et en relation public, je suis un fin connaisseur des TIC, un explorateur du pixel, un geek de l’info.",
       expériences: "Content-Manager & Social Media Manager chez Brandie, agence de communication à Montpellier de 2021 à aujourd'hui ! Pour en savoir plus sur mes missions, tape Brandie.\n \nSocial Media Manager, Chargé des Partenariats Médias & des Relations Presse au Festival Radio France Montpellier de 2017 à 2021 !\n \nPour en savoir plus sur mes missions, tape Festival.\n \nAutres : tape Stage pour connaître mes expériences de stagiaire.",
       projets: "Je suis dans une agence de com.",
@@ -149,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleInput(input) {
     // Afficher la demande de l'utilisateur avec "vous : "
-    printMessage(`vous : ${input}`);
+    printMessage(`vous : vous avez demandé d'en savoir plus sur ${input}.`);
 
     const lowercasedInput = input.toLowerCase();
 
@@ -247,29 +238,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Fonction pour traiter les clics sur les boutons
   document.querySelectorAll('.btn-action').forEach(button => {
-    button.addEventListener('click', function() {
-      const command = this.getAttribute('data-command');
+    button.addEventListener('click', () => {
+      const command = button.getAttribute('data-command');
       handleInput(command);  // Utilise la fonction existante pour traiter la commande
     });
   });
 
-  function ajouterMessageHistorique(message, isUser = false) {
-    const p = document.createElement('p');
-    p.textContent = message;
-    p.className = isUser ? 'user-message' : 'ai-message';
-    historique.appendChild(p);
+  // Créez un objet Audio pour le son du bouton
+  const buttonSound = new Audio('bouton_SFX.mp3');
+  buttonSound.volume = 0.1; // Ajustez cette valeur entre 0 et 1 selon vos préférences
 
-    // Ajouter le séparateur après chaque message
-    const separateur = document.createElement('p');
-    separateur.textContent = '----------';
-    separateur.className = 'separateur-chat';
-    historique.appendChild(separateur);
-
-    historique.scrollTop = historique.scrollHeight;
+  // Fonction pour jouer le son
+  function playButtonSound() {
+    buttonSound.currentTime = 0; // Réinitialise le son au début
+    buttonSound.play().catch(error => console.log("Erreur de lecture audio :", error));
   }
 
-  // Utilisez cette fonction chaque fois que vous ajoutez un message à l'historique
-  // Par exemple :
-  // ajouterMessageHistorique("Message de l'utilisateur", true);
-  // ajouterMessageHistorique("Réponse de l'IA", false);
+  // Fonction pour gérer le clic sur un bouton
+  function handleButtonClick(buttonId) {
+    playButtonSound(); // Joue le son du bouton
+
+    // Le reste de votre logique de gestion des clics de bouton ici
+    // ...
+  }
+
+  // Ajoutez cet écouteur d'événements à tous vos boutons
+  document.querySelectorAll('.btn-action').forEach(button => {
+    button.addEventListener('click', () => {
+      handleButtonClick(button.id);
+    });
+  });
 });
