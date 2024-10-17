@@ -252,4 +252,24 @@ document.addEventListener("DOMContentLoaded", () => {
       handleInput(command);  // Utilise la fonction existante pour traiter la commande
     });
   });
+
+  function ajouterMessageHistorique(message, isUser = false) {
+    const p = document.createElement('p');
+    p.textContent = message;
+    p.className = isUser ? 'user-message' : 'ai-message';
+    historique.appendChild(p);
+
+    // Ajouter le séparateur après chaque message
+    const separateur = document.createElement('p');
+    separateur.textContent = '----------';
+    separateur.className = 'separateur-chat';
+    historique.appendChild(separateur);
+
+    historique.scrollTop = historique.scrollHeight;
+  }
+
+  // Utilisez cette fonction chaque fois que vous ajoutez un message à l'historique
+  // Par exemple :
+  // ajouterMessageHistorique("Message de l'utilisateur", true);
+  // ajouterMessageHistorique("Réponse de l'IA", false);
 });
