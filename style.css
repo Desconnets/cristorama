@@ -296,6 +296,7 @@ height: 80%;
 
 #muteButton {
   display: block;
+  cursor: pointer;
 }
 
 #muteButton.muted {
@@ -902,4 +903,128 @@ body {
   background-color: #222; /* La couleur de fond du site */
   color: #77ff77; /* La couleur du texte du site */
   border: 1px solid #77ff77; /* Bordure de la couleur du texte */
+}
+
+/* Ajoutez ces règles à la fin de votre fichier CSS */
+
+@media (max-width: 480px) and (max-height: 750px) {
+  body {
+    font-size: 14px; /* Réduction de la taille de base du texte */
+  }
+
+  #logo {
+    font-size: 22px; /* Réduction de la taille du logo */
+  }
+
+  nav ul li {
+    font-size: 12px; /* Réduction de la taille du texte du menu */
+    margin: 0 3px; /* Réduction des marges entre les éléments du menu */
+  }
+
+  #fenetre-dialogue {
+    width: 98%; /* Augmentation de la largeur pour utiliser presque tout l'espace disponible */
+    height: 85%; /* Ajustement de la hauteur */
+    margin-top: 10px; /* Réduction de la marge supérieure */
+  }
+
+  #animation-container {
+    margin-top: 5px; /* Réduction de la marge supérieure */
+  }
+
+  #chat2 {
+    height: 85%; /* Ajustement de la hauteur du chat */
+  }
+
+  #terminal {
+    height: 75vh; /* Ajustement de la hauteur du terminal */
+    font-size: 14px; /* Réduction de la taille du texte dans le terminal */
+    line-height: 1; /* Réduction maximale de l'interlignage */
+  }
+
+  #historique, #historique p {
+    font-size: 14px; /* Réduction de la taille du texte dans l'historique */
+    line-height: 1; /* Réduction maximale de l'interlignage */
+    margin-bottom: 0.1em; /* Réduction minimale de l'espace entre les paragraphes */
+  }
+
+  .btn-action {
+    font-size: 12px; /* Réduction de la taille du texte des boutons */
+    padding: 6px; /* Réduction du padding des boutons */
+  }
+
+  #texte1, #texte2 {
+    font-size: 18px; /* Réduction de la taille du texte pour texte1 et texte2 */
+    width: 95%; /* Augmentation de la largeur pour utiliser plus d'espace */
+    padding: 2%; /* Réduction du padding */
+  }
+
+  #monGif {
+    max-width: 50px; /* Réduction supplémentaire de la taille du GIF */
+    margin-right: 10px; /* Réduction de l'espace à droite du GIF */
+  }
+
+  #boutons-container {
+    gap: 1px; /* Réduction de l'espace entre les boutons */
+  }
+
+  #entete {
+    height: 25px; /* Réduction de la hauteur de l'en-tête */
+  }
+
+  #nom-utilisateur-conteneur {
+    font-size: 16px; /* Réduction de la taille du texte du nom d'utilisateur */
+  }
+}
+
+/* Ajoutez ou modifiez ces règles dans votre media query existante */
+@media (max-width: 480px) and (max-height: 750px) {
+  #fenetre-dialogue {
+    width: 98%;
+    height: 78vh; /* Ajusté pour laisser de l'espace pour le header et une petite marge */
+    margin-top: 5px; /* Réduit encore la marge supérieure */
+  }
+
+  #chat2 {
+    height: 90%; /* Augmenté pour utiliser plus d'espace vertical */
+  }
+
+  #terminal {
+    height: 65vh; /* Ajusté pour s'adapter à la nouvelle hauteur de fenetre-dialogue */
+    padding: 0.5em; /* Réduit le padding pour gagner de l'espace */
+  }
+
+  #historique {
+    height: 85%; /* Ajusté pour laisser de l'espace pour les boutons */
+  }
+
+  #boutons-container {
+    margin-top: 5px; /* Réduit la marge au-dessus des boutons */
+  }
+
+  .btn-action {
+    padding: 5px; /* Réduit encore le padding des boutons */
+    font-size: 11px; /* Réduit encore la taille de la police des boutons */
+  }
+
+  body {
+    padding-top: 5px; /* Réduit le padding en haut du body */
+  }
+
+  header {
+    padding: 5px 0; /* Réduit le padding du header */
+  }
+
+  #logo {
+    font-size: 20px; /* Réduit encore la taille du logo */
+    margin-bottom: 2px; /* Réduit la marge en bas du logo */
+  }
+
+  nav {
+    margin-top: 2px; /* Réduit la marge au-dessus de la navigation */
+  }
+
+  nav ul li {
+    font-size: 11px; /* Réduit encore la taille du texte du menu */
+    margin: 0 2px; /* Réduit les marges entre les éléments du menu */
+  }
 }

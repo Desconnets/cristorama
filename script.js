@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
       mainContent.classList.remove('hidden');
       startAnimations(); // Lancer les animations originales
       animationsStarted = true;
+      
+      // Démarrer la musique ici
+      if (!musicStarted) {
+        audio.play().then(() => {
+          musicStarted = true;
+          console.log("Musique démarrée avec succès");
+        }).catch(error => {
+          console.log("Erreur lors du démarrage de la musique :", error);
+        });
+      }
     }
   });
 
@@ -62,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const texte1 = document.getElementById("texte1");
     const texte2 = document.getElementById("texte2");
     const chat = document.getElementById("fenetre-dialogue");
-    const audio = document.getElementById("myAudio");
+    
 
     setTimeout(() => {
       texte1.classList.remove("hidden");
@@ -79,8 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   setTimeout(() => {
                     chat.classList.remove("hidden");
                     chat.classList.add("fade-in");
-                    audio.src = 'strauss.mp3';
-                    playAudio();
+                    // Supprimez ces deux lignes :
+                    // audio.src = 'strauss.mp3';
+                    // playAudio();
                   }, 2000); // Délai avant d'afficher la fenêtre de dialogue
                 }, 10000); // Délai après l'animation du texte2
               }
@@ -244,21 +255,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Gestion du son
   const audio = document.getElementById("myAudio");
+  let musicStarted = false;
   const muteButton = document.getElementById("muteButton");
   audio.volume = 0.1;
 
-  // Fonction pour jouer l'audio
-  function playAudio() {
-    audio.play().catch(error => {
-      console.log("Lecture audio impossible :", error);
-    });
-  }
-
-  // Modifiez cet événement pour jouer l'audio uniquement lors du premier clic sur le bouton de lecture
+  // Modifiez l'événement du bouton Mute/Play
   muteButton.addEventListener("click", function () {
     if (audio.paused) {
-      audio.play();
-      muteButton.textContent = "Mute Music";
+      audio.play().then(() => {
+        muteButton.textContent = "Mute Music";
+      }).catch(error => {
+        console.log("Erreur lors de la reprise de la musique :", error);
+      });
     } else {
       audio.pause();
       muteButton.textContent = "Play Music";
