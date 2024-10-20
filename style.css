@@ -1028,3 +1028,102 @@ body {
     margin: 0 2px; /* Réduit les marges entre les éléments du menu */
   }
 }
+
+/* Augmentation de la taille du logo et des éléments du menu */
+@media (max-width: 480px) and (max-height: 750px) {
+  /* Augmentation de la taille du logo et des éléments du menu */
+  #logo {
+    font-size: 28px; /* Augmenté de 20px à 28px */
+  }
+
+  nav ul li {
+    font-size: 16px; /* Augmenté de 11px à 16px */
+  }
+
+  /* Ajustement du GIF si nécessaire */
+  #monGif {
+    max-width: 45px; /* Légèrement réduit si nécessaire */
+  }
+
+  /* Augmentation de la taille des boutons et du conteneur */
+  #boutons-container {
+    margin-top: 10px; /* Augmenté de 5px à 10px */
+    gap: 5px; /* Augmenté de 1px à 5px */
+  }
+
+  .btn-action {
+    padding: 10px; /* Augmenté de 5px à 10px */
+    font-size: 16px; /* Augmenté de 11px à 16px */
+  }
+
+  /* Augmentation de la taille du texte dans la fenêtre de dialogue */
+  #fenetre-dialogue {
+    font-size: 18px; /* Augmenté, ajustez selon vos préférences */
+  }
+
+  #terminal, #historique, #historique p {
+    font-size: 16px; /* Augmenté de 14px à 16px */
+    line-height: 1.2; /* Légèrement augmenté pour une meilleure lisibilité */
+  }
+
+  /* Ajustement de la taille du texte du nom d'utilisateur */
+  #nom-utilisateur-conteneur {
+    font-size: 18px; /* Augmenté de 16px à 18px */
+  }
+
+  /* Autres ajustements pour maintenir la mise en page */
+  #fenetre-dialogue {
+    height: 75vh; /* Légèrement réduit pour s'adapter aux boutons plus grands */
+  }
+
+  #chat2 {
+    height: 85%; /* Ajusté pour s'adapter à la nouvelle taille de fenetre-dialogue */
+  }
+
+  #terminal {
+    height: 60vh; /* Ajusté pour s'adapter à la nouvelle taille de fenetre-dialogue */
+  }
+}
+
+/* Modifications existantes... */
+
+@media (max-width: 480px) and (max-height: 750px) {
+  /* Modifications existantes... */
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Retour à 3 colonnes */
+    gap: 5px; /* Augmente légèrement l'espace entre les boutons */
+    margin-top: 8px;
+    padding: 0 5px;
+  }
+
+  .btn-action {
+    padding: 10px 5px; /* Augmente le padding vertical pour des boutons plus hauts */
+    font-size: 14px; /* Augmente légèrement la taille de la police */
+    white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
+    height: auto; /* Permet aux boutons de s'ajuster à leur contenu */
+    min-height: 50px; /* Définit une hauteur minimale pour les boutons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2; /* Ajuste l'interlignage pour une meilleure lisibilité */
+  }
+
+  /* Ajustements pour s'assurer que la fenêtre de dialogue s'adapte */
+  #fenetre-dialogue {
+    height: 68vh; /* Réduit légèrement la hauteur pour laisser plus d'espace aux boutons */
+  }
+
+  #chat2 {
+    height: 75%; /* Ajuste la hauteur du chat */
+  }
+
+  #terminal {
+    height: 52vh; /* Ajuste la hauteur du terminal */
+  }
+
+  /* Autres ajustements si nécessaire... */
+}
+
