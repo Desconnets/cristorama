@@ -445,7 +445,7 @@ height: 80%;
   height: calc(100% - 50px); /* Ajuste la hauteur pour les boutons */
 }
 
-/* Ajoutez ces règles pour les très petits écrans */
+/* Ajoutez ces règles pour les très petits ��crans */
 @media (max-width: 360px) {
   html, body {
     min-width: 300px; /* Réduisez encore la largeur minimale */
@@ -1127,3 +1127,36 @@ body {
   /* Autres ajustements si nécessaire... */
 }
 
+@media (max-width: 480px) and (max-height: 750px) {
+  /* Autres styles existants... */
+
+  #fenetre-dialogue {
+    height: 80vh; /* Augmenté de 68vh à 80vh pour donner plus d'espace */
+  }
+
+  #chat2 {
+    height: 85%; /* Augmenté de 75% à 85% */
+  }
+
+  #terminal {
+    height: 70vh; /* Augmenté de 52vh à 70vh */
+    padding: 0.3em; /* Réduit légèrement le padding pour gagner de l'espace */
+  }
+
+  #historique {
+    height: 90%; /* Augmenté de 85% à 90% */
+    overflow-y: auto; /* Assure que le défilement est possible si le contenu dépasse */
+  }
+
+  #boutons-container {
+    margin-top: 3px; /* Réduit la marge au-dessus des boutons */
+  }
+
+  .btn-action {
+    padding: 8px 4px; /* Réduit légèrement le padding des boutons */
+    min-height: 40px; /* Réduit la hauteur minimale des boutons */
+    font-size: 12px; /* Réduit légèrement la taille de la police */
+  }
+
+  /* Ajustez d'autres éléments si nécessaire pour s'adapter à ces changements */
+}
