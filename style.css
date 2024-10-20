@@ -170,25 +170,23 @@ nav ul li {
   overflow: hidden;
   width: 100%;
   font-family: "VT323";
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
   color: #77ff77;
 }
 
 #nom-utilisateur {
-  margin-left: 10px;
-  color: #77ff77;
   display: inline-block;
-  width: calc(100% - 2ch);
-  animation: nomUtilisateur 10s linear infinite;
+  white-space: nowrap;
+  animation: nomUtilisateur 20s linear infinite; /* Augmenté la durée pour un défilement plus lent */
 }
 
 @keyframes nomUtilisateur {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -985,7 +983,7 @@ body {
   }
 
   #chat2 {
-    height: 90%; /* Augment�� pour utiliser plus d'espace vertical */
+    height: 90%; /* Augment pour utiliser plus d'espace vertical */
   }
 
   #terminal {
@@ -1217,3 +1215,5 @@ body {
     overflow-y: auto;
   }
 }
+
+
