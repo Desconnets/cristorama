@@ -445,7 +445,7 @@ height: 80%;
   height: calc(100% - 50px); /* Ajuste la hauteur pour les boutons */
 }
 
-/* Ajoutez ces règles pour les très petits ��crans */
+/* Ajoutez ces règles pour les très petits crans */
 @media (max-width: 360px) {
   html, body {
     min-width: 300px; /* Réduisez encore la largeur minimale */
@@ -985,7 +985,7 @@ body {
   }
 
   #chat2 {
-    height: 90%; /* Augmenté pour utiliser plus d'espace vertical */
+    height: 90%; /* Augment�� pour utiliser plus d'espace vertical */
   }
 
   #terminal {
@@ -1159,4 +1159,61 @@ body {
   }
 
   /* Ajustez d'autres éléments si nécessaire pour s'adapter à ces changements */
+}
+
+.skip-intro {
+  font-family: "VT323", monospace;
+  color: #77ff77;
+  font-size: 14px; /* Taille plus petite que le bouton "Bonjour" */
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.skip-intro:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) and (max-height: 750px) {
+  /* Autres styles existants... */
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px; /* Réduit légèrement l'espace entre les boutons */
+    margin-top: 6px;
+    padding: 0 4px;
+  }
+
+  .btn-action {
+    padding: 8px 4px; /* Réduit légèrement le padding horizontal */
+    font-size: 14px; /* Augmente la taille de la police de 12px à 14px */
+    min-height: 45px; /* Augmente légèrement la hauteur minimale */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
+  }
+
+  /* Ajustements pour s'assurer que la fenêtre de dialogue s'adapte */
+  #fenetre-dialogue {
+    height: 78vh; /* Augmente légèrement la hauteur */
+  }
+
+  #chat2 {
+    height: 82%; /* Ajuste la hauteur du chat */
+  }
+
+  #terminal {
+    height: 68vh; /* Ajuste la hauteur du terminal */
+    padding: 0.3em;
+  }
+
+  #historique {
+    height: 88%; /* Ajuste la hauteur de l'historique */
+    overflow-y: auto;
+  }
 }

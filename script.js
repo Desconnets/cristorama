@@ -305,4 +305,34 @@ document.addEventListener("DOMContentLoaded", () => {
       handleButtonClick(button.id);
     });
   });
+
+  const skipIntroLink = document.getElementById("skipIntro");
+  skipIntroLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("welcome-screen").classList.add("hidden");
+    document.getElementById("main-content").classList.remove("hidden");
+    document.getElementById("fenetre-dialogue").classList.remove("hidden");
+    // Assurez-vous que texte1 et texte2 sont cachés
+    document.getElementById("texte1").classList.add("hidden");
+    document.getElementById("texte2").classList.add("hidden");
+    
+    // Démarrer la musique
+    if (!musicStarted) {
+      audio.play().then(() => {
+        musicStarted = true;
+        console.log("Musique démarrée avec succès");
+        muteButton.textContent = "Mute Music";
+      }).catch(error => {
+        console.log("Erreur lors du démarrage de la musique :", error);
+      });
+    }
+    
+    // Initialisez directement le chat ici si nécessaire
+    initializeChat();
+  });
 });
+
+function initializeChat() {
+  // Placez ici le code pour initialiser le chat
+  displayWelcomeMessage();
+}
