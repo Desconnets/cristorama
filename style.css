@@ -1,9 +1,9 @@
 /* styles.css */
 html, body {
-  min-width: 320px; /* Réduisez la largeur minimale */
-  min-height: 100vh; /* Utilisez 100vh au lieu d'une valeur fixe */
-  width: 100%; /* Assurez-vous que le body prend toute la largeur */
-  overflow-x: hidden; /* Empêche le défilement horizontal */
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,10 +15,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  font-size: 16px; /* Taille de base légèrement augmentée */
-  line-height: 1.4; /* Interlignage de base réduit */
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 header {
@@ -28,7 +26,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: static; /* Changé de 'fixed' à 'static' */
+  position: static;
   top: 10px;
   left: 0;
   z-index: 1000;
@@ -40,8 +38,8 @@ header {
 }
 
 #monGif {
-  max-width: 90px; /* Ajustez la taille du GIF si nécessaire */
-  margin-right: 30px; /* Espace entre le GIF et le logo/menu */
+  max-width: 90px;
+  margin-right: 30px;
 }
 
 #center-content {
@@ -57,24 +55,24 @@ header {
   font-size: 35px;
   font-weight: bold;
   background-color: inherit;
-  margin-bottom: 5px; /* Réduit la marge en bas du logo */
+  margin-bottom: 5px;
 }
 
 nav {
-  margin-top: 5px; /* Ajoute une petite marge en haut de la navigation */
+  margin-top: 5px;
 }
 
 nav ul {
-  margin: 0; /* Supprime la marge par défaut de la liste */
-  padding: 0; /* Supprime le padding par défaut de la liste */
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
-  gap: 10px; /* Espace entre les éléments du menu */
+  gap: 10px;
 }
 
 nav ul li {
   display: inline-block;
-  margin: 0 10px; /* Ajoute un espace horizontal entre les éléments de la liste */
+  margin: 0 10px;
 }
 
 #animation-container {
@@ -82,48 +80,19 @@ nav ul li {
   max-width: 1000px;
   margin: 20px auto;
   text-align: center;
-  margin-top: 20px; /* Réduit de 140px à 20px car le header n'est plus fixe */
 }
 
-@media screen and (max-width: 992px) {
-  #animation-container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #animation-container {
-    margin-top: 100px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  #animation-container {
-    margin-top: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  #animation-container {
-    width: 95%;
-    margin-top: 60px;
-  }
-}
-
-#texte1 {
-  padding: 10%;
-  margin: 20px auto;
+#texte1, #texte2 {
   text-align: center;
-  font-size: 20px; /* Taille de base augmentée pour texte1 et texte2 */
-  line-height: 1.3; /* Interlignage réduit pour texte1 et texte2 */
-}
-
-#texte2 {
-  padding: 10%;
-  margin: 20px auto;
-  text-align: center;
-  font-size: 20px; /* Taille de base augmentée pour texte1 et texte2 */
-  line-height: 1.3; /* Interlignage réduit pour texte1 et texte2 */
+  font-size: 20px;
+  width: 40ch;
+  line-height: 1.3;
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .hidden {
@@ -135,12 +104,8 @@ nav ul li {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 #fenetre-dialogue {
@@ -178,28 +143,16 @@ nav ul li {
 #nom-utilisateur {
   display: inline-block;
   white-space: nowrap;
-  animation: nomUtilisateur 20s linear infinite; /* Augmenté la durée pour un défilement plus lent */
+  animation: nomUtilisateur 20s linear infinite;
 }
 
 @keyframes nomUtilisateur {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 #boutons {
   float: right;
-}
-
-.bouton {
-  margin: 0 5px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #00ff00;
-  cursor: pointer;
 }
 
 #contenu {
@@ -217,8 +170,7 @@ nav ul li {
 
 #chat2 {
   width: 100%;
- /* height: 60vh;*/
-height: 80%;
+  height: 80%;
   margin: 0 auto;
   border: 1px solid #77ff77;
   background-color: #222;
@@ -248,10 +200,6 @@ height: 80%;
 
 #zone-saisie {
   position: relative;
- /* width: 90%;
-  heigh: 100px ;
-  margin: 0 auto;
-  border-top: 1px solid #77ff77;*/
   background-color: #222;
   color: #77ff77;
 }
@@ -260,36 +208,10 @@ height: 80%;
   width: 100%;
   background-color: #222;
   color: #77ff77;
- /* border: none;
-  outline: none;
-  padding: 0.5em; */
 }
 
 #input-zone:focus {
   border-color: #222;
-}
-
-.reponse {
-  color: #77ff77;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #222;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #77ff77;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #77ff77;
 }
 
 #muteButton {
@@ -301,117 +223,39 @@ height: 80%;
   display: none;
 }
 
-/* styles.css */
-
-@media (max-width: 768px) {
-  body {
-    font-size: 18px; /* Augmentation de la taille de base du texte */
-  }
-
-  #logo {
-    font-size: 28px; /* Réduction légère de la taille du logo */
-  }
-
-  #fenetre-dialogue {
-    width: 90%;
-    height: 70%; /* Réduit de 80% à 70% */
-    margin-top: 15px; /* Réduit de 20px à 15px */
-  }
-
-  #historique {
-    font-size: 16px; /* Augmentation de la taille du texte dans l'historique */
-    line-height: 1.4; /* Ajustement de l'interligne */
-  }
-
-  #chat2 {
-    height: 75%; /* Ajuste la hauteur du chat */
-  }
-
-  #terminal {
-    height: 60vh; /* Ajuste la hauteur du terminal */
-  }
-
-  .btn-action {
-    font-size: 16px; /* Augmentation de la taille du texte des boutons */
-    padding: 10px; /* Augmentation du padding pour une meilleure zone de clic */
-  }
-
-  #texte1, #texte2 {
-    padding: 5%; /* Réduction du padding pour les textes */
-    font-size: 20px; /* Augmentation de la taille du texte */
-    width: 90%; /* Limitez la largeur */
-    margin: 10px auto; /* Centrez et ajoutez des marges */
-  }
-
-  #monGif {
-    max-width: 60px; /* Réduction de la taille du GIF */
-    margin-right: 15px; /* Réduction de l'espace */
-  }
-
-  nav ul {
-    flex-wrap: wrap; /* Permet aux éléments du menu de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les éléments du menu */
-    gap: 5px; /* Réduisez l'espace entre les éléments du menu */
-  }
-
-  nav ul li {
-    margin: 5px; /* Réduction des marges entre les éléments du menu */
-    font-size: 14px; /* Réduction de la taille du texte du menu */
-    margin: 2px; /* Réduisez les marges */
-  }
-
-  #animation-container {
-    width: 90%; /* Réduisez la largeur pour éviter le débordement */
-     /* Augmentez la marge supérieure */
-  }
-
-  #fenetre-dialogue {
-    width: 90%; /* Réduisez légèrement la largeur */
-    margin-top: 120px; /* Augmentez la marge supérieure */
-  }
-
-  #animation-container {
-    width: 90%; /* Réduisez la largeur pour éviter le débordement */
-    margin-top: 100px; /* Augmentez la marge supérieure */
-  }
-
-  #fenetre-dialogue {
-    width: 90%; /* Réduisez légèrement la largeur */
-    margin-top: 120px; /* Augmentez la marge supérieure */
-  }
-
-  header {
-    top: 5px; /* Ajustez la valeur pour les écrans plus petits si nécessaire */
-  }
+#intro-animation {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center; /* Ajout de cette ligne */
+width: 100%; /
 }
 
-/* Pour les très petits écrans */
-@media (max-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-
-  #logo {
-    font-size: 24px;
-  }
-
-  .btn-action {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  #fenetre-dialogue {
-    width: 98%;
-    height: 75%; /* Réduit de 85% à 75% */
-    margin-top: 10px; /* Réduit de 15px à 10px */
-  }
+#introGif {
+  max-width: 50%;
+  max-height: 50%;
+  display: inline-block; /
 }
 
-/* Nouvelle media query pour la plage 480px-768px */
-@media (min-width: 481px) and (max-width: 768px) {
-  #fenetre-dialogue {
-    margin-top: 70px; /* Ajustez cette valeur selon vos préférences */
-  }
+#introTitle {
+  font-size: 4em; 
+  /* Utilise vmin pour s'adapter à la taille de la fenêtre */
+
+}
+
+#startButton {
+  position: fixed;
+  font-size: 2em;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #77ff77;
+  border: 2px solid #77ff77;
+  font-family: "VT323", monospace;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #boutons-container {
@@ -426,9 +270,9 @@ height: 80%;
   background-color: #222;
   color: #77ff77;
   border: 2px solid #77ff77;
-  padding: 8px; /* Réduction de la taille des boutons */
+  padding: 8px;
   font-family: "VT323", monospace;
-  font-size: 14px; /* Réduction de la taille de la police */
+  font-size: 14px;
   cursor: pointer;
   border-radius: 3px;
   text-align: center;
@@ -436,423 +280,6 @@ height: 80%;
 
 .btn-action:hover {
   background-color: #66cc66;
-}
-
-#contenu {
-  overflow-y: auto; /* Permet le défilement si nécessaire */
-  height: calc(100% - 50px); /* Ajuste la hauteur pour les boutons */
-}
-
-/* Ajoutez ces règles pour les très petits crans */
-@media (max-width: 360px) {
-  html, body {
-    min-width: 300px; /* Réduisez encore la largeur minimale */
-  }
-
-  #logo {
-    font-size: 20px; /* Réduisez encore la taille du logo */
-  }
-
-  nav ul li {
-    font-size: 12px; /* Réduisez encore la taille du texte du menu */
-  }
-
-  #fenetre-dialogue {
-    width: 98%;
-    height: 80%; /* Réduit de 88% à 80% */
-    margin-top: 5px; /* Réduit de 10px à 5px */
-  }
-}
-
-.fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #222; /* Couleur de fond initiale */
-  z-index: 1000;
-  font-family: "VT323", monospace; /* Typographie initiale */
-  color: #77ff77; /* Couleur du texte initiale */
-}
-
-.hidden {
-  display: none;
-}
-
-#introGif {
-  max-width: 50%;
-  max-height: 50%;
-}
-
-#introTitle {
-  font-size: 3em;
-  margin-top: 20px;
-}
-
-#startButton {
-  font-size: 2em;
-  padding: 10px 20px;
-  background-color: #222;
-  color: #77ff77;
-  border: 2px solid #77ff77;
-  font-family: "VT323", monospace;
-  cursor: pointer;
-}
-
-#startButton:hover {
-  background-color: #66cc66;
-}
-
-#texte1, #texte2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1001;
-  text-align: left; /* Changé de 'center' à 'left' */
-  width: 80%;
-  max-width: 800px;
-  white-space: pre-wrap; /* Pour préserver les sauts de ligne */
-  height: auto; /* Hauteur automatique */
-  overflow: hidden; /* Cache le texte qui dépasse */
-}
-
-#fenetre-dialogue {
-  border: 3px solid #77ff77;
-  border-radius: 5px;
-  background-color: #222;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  width: 70%;
-  height: 70%;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  #fenetre-dialogue {
-    width: 90%;
-    height: 85%; /* Augmenté de 80% à 85% */
-    margin-top: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  #fenetre-dialogue {
-    width: 98%;
-    height: 90%; /* Augmenté à 90% pour les très petits écrans */
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 360px) {
-  #fenetre-dialogue {
-    width: 95%;
-    height: 95%; /* Encore plus grand pour les écrans les plus petits */
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  #terminal {
-    height: 70vh; /* Augmentez la hauteur du terminal */
-  }
-  
-  #chat2 {
-    height: 85%; /* Ajustez la hauteur du chat */
-  }
-}
-
-@media (max-width: 480px) {
-  #terminal {
-    height: 75vh;
-  }
-  
-  #chat2 {
-    height: 90%;
-  }
-}
-
-@media (max-width: 770px), (max-height: 950px) {
-  #fenetre-dialogue {
-    width: 90%;
-    height: 80%; /* Maintient la hauteur à 80% de l'espace disponible */
-    margin-top: 20px; /* Réduit l'espace entre le header et la boîte de dialogue de 100px */
-  }
-
-  #animation-container {
-    margin-top: 10px; /* Réduit également la marge supérieure du conteneur d'animation */
-  }
-
-  #chat2 {
-    height: 75%; /* Ajuste la hauteur du chat pour s'adapter à la nouvelle taille */
-  }
-
-  #terminal {
-    height: 65vh; /* Ajuste la hauteur du terminal */
-  }
-
-  /* Ajustements pour le header */
-  header {
-    padding: 5px 0;
-  }
-
-  #logo {
-    font-size: 24px;
-  }
-
-  nav ul li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
-/* Ajustements supplémentaires pour les écrans très étroits */
-@media (max-width: 480px) {
-  #fenetre-dialogue {
-    width: 95%;
-    height: 85%;
-    margin-top: 15px;
-  }
-
-  #chat2 {
-    height: 80%;
-  }
-
-  #terminal {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 770px), (max-height: 950px) {
-  body {
-    padding-top: 20px; /* Ajoute de l'espace au-dessus du header */
-  }
-
-  header {
-    padding: 15px 0; /* Augmente légèrement le padding vertical du header */
-  }
-
-  #fenetre-dialogue {
-    width: 90%;
-    height: 80%;
-    margin-top: 20px;
-  }
-
-  #animation-container {
-    margin-top: 30px; /* Augmente légèrement la marge supérieure */
-  }
-
-  #logo {
-    font-size: 24px;
-  }
-
-  nav ul li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-
-  #chat2 {
-    height: 75%;
-  }
-
-  #terminal {
-    height: 65vh;
-  }
-}
-
-/* Ajustements supplémentaires pour les écrans très étroits */
-@media (max-width: 480px) {
-  body {
-    padding-top: 15px; /* Réduit légèrement l'espace pour les très petits écrans */
-  }
-
-  #fenetre-dialogue {
-    width: 95%;
-    height: 85%;
-    margin-top: 15px;
-  }
-
-  #chat2 {
-    height: 80%;
-  }
-
-  #terminal {
-    height: 70vh;
-  }
-}
-
-/* Styles de base pour texte1 et texte2 */
-#texte1, #texte2 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1001;
-  text-align: left;
-  width: 80%;
-  max-width: 800px;
-  white-space: pre-wrap;
-  height: auto;
-  overflow: hidden;
-  font-size: 18px; /* Taille de base pour les petits écrans */
-}
-
-/* Augmentation de la taille des polices pour les grands écrans */
-@media (min-width: 771px) and (min-height: 951px) {
-  body {
-    font-size: 18px; /* Taille de base du texte augmentée */
-  }
-
-  #texte1, #texte2 {
-    font-size: 24px; /* Taille augmentée pour texte1 et texte2 */
-  }
-
-  #logo {
-    font-size: 40px; /* Taille du logo augmentée */
-  }
-
-  nav ul li {
-    font-size: 20px; /* Taille du texte du menu augmentée */
-  }
-
-  #fenetre-dialogue {
-    font-size: 20px; /* Taille du texte dans la boîte de dialogue augmentée */
-  }
-
-  #terminal {
-    font-size: 18px; /* Taille du texte dans le terminal augmentée */
-  }
-
-  .btn-action {
-    font-size: 18px; /* Taille du texte des boutons augmentée */
-  }
-}
-
-/* Ajustements pour les écrans très larges */
-@media (min-width: 1200px) {
-  #texte1, #texte2 {
-    font-size: 28px; /* Taille encore plus grande pour les très grands écrans */
-  }
-
-  body {
-    font-size: 20px;
-  }
-
-  #logo {
-    font-size: 44px;
-  }
-
-  nav ul li {
-    font-size: 22px;
-  }
-
-  #fenetre-dialogue {
-    font-size: 22px;
-  }
-
-  #terminal {
-    font-size: 20px;
-  }
-
-  .btn-action {
-    font-size: 20px;
-  }
-}
-
-/* Ajustements pour les écrans en dessous de 770x950px */
-@media (max-width: 770px), (max-height: 950px) {
-  body {
-    font-size: 17px; /* Légère augmentation de la taille de base */
-    line-height: 1.3; /* Réduction de l'interlignage */
-  }
-
-  #texte1, #texte2 {
-    font-size: 22px; /* Taille augmentée pour texte1 et texte2 */
-    line-height: 1.2; /* Interlignage réduit pour texte1 et texte2 */
-  }
-
-  #logo {
-    font-size: 26px; /* Légère augmentation */
-  }
-
-  nav ul li {
-    font-size: 15px; /* Légère augmentation */
-  }
-
-  #fenetre-dialogue {
-    font-size: 17px; /* Légère augmentation */
-  }
-
-  #terminal {
-    font-size: 16px; /* Légère augmentation */
-    line-height: 1.3; /* Réduction de l'interlignage */
-  }
-
-  .btn-action {
-    font-size: 15px; /* Légère augmentation */
-  }
-}
-
-/* Styles de base */
-body {
-  font-size: 16px;
-}
-
-#texte1, #texte2 {
-  font-size: 20px;
-}
-
-/* Styles spécifiques pour le chat et l'historique */
-#chat2, #terminal, #historique, #historique p {
-  line-height: 1.2; /* Réduit l'interlignage pour le chat et l'historique */
-  margin-bottom: 0.3em; /* Réduit l'espace entre les paragraphes */
-}
-
-/* Ajustements pour les écrans en dessous de 770x950px */
-@media (max-width: 770px), (max-height: 950px) {
-  body {
-    font-size: 17px;
-  }
-
-  #texte1, #texte2 {
-    font-size: 22px;
-  }
-
-  #logo {
-    font-size: 26px;
-  }
-
-  nav ul li {
-    font-size: 15px;
-  }
-
-  #fenetre-dialogue {
-    font-size: 17px;
-  }
-
-  #terminal, #historique, #historique p {
-    font-size: 16px;
-    line-height: 1.1; /* Réduit encore plus l'interlignage pour le chat et l'historique sur petits écrans */
-    margin-bottom: 0.2em; /* Réduit davantage l'espace entre les paragraphes */
-  }
-
-  .btn-action {
-    font-size: 15px;
-  }
-}
-
-/* Ajustement supplémentaire pour les très petits écrans */
-@media (max-width: 480px) {
-  #terminal, #historique, #historique p {
-    line-height: 1; /* Réduit au maximum l'interlignage pour les très petits écrans */
-    margin-bottom: 0.1em; /* Réduit au minimum l'espace entre les paragraphes */
-  }
 }
 
 .contact-item {
@@ -893,276 +320,20 @@ body {
 }
 
 .cristobal-prefix {
-  background-color: #77ff77; /* La couleur du texte du site */
-  color: #222; /* La couleur de fond du site */
+  background-color: #77ff77;
+  color: #222;
 }
 
 .vous-prefix {
-  background-color: #222; /* La couleur de fond du site */
-  color: #77ff77; /* La couleur du texte du site */
-  border: 1px solid #77ff77; /* Bordure de la couleur du texte */
-}
-
-/* Ajoutez ces règles à la fin de votre fichier CSS */
-
-@media (max-width: 480px) and (max-height: 750px) {
-  body {
-    font-size: 14px; /* Réduction de la taille de base du texte */
-  }
-
-  #logo {
-    font-size: 22px; /* Réduction de la taille du logo */
-  }
-
-  nav ul li {
-    font-size: 12px; /* Réduction de la taille du texte du menu */
-    margin: 0 3px; /* Réduction des marges entre les éléments du menu */
-  }
-
-  #fenetre-dialogue {
-    width: 98%; /* Augmentation de la largeur pour utiliser presque tout l'espace disponible */
-    height: 85%; /* Ajustement de la hauteur */
-    margin-top: 10px; /* Réduction de la marge supérieure */
-  }
-
-  #animation-container {
-    margin-top: 5px; /* Réduction de la marge supérieure */
-  }
-
-  #chat2 {
-    height: 85%; /* Ajustement de la hauteur du chat */
-  }
-
-  #terminal {
-    height: 75vh; /* Ajustement de la hauteur du terminal */
-    font-size: 14px; /* Réduction de la taille du texte dans le terminal */
-    line-height: 1; /* Réduction maximale de l'interlignage */
-  }
-
-  #historique, #historique p {
-    font-size: 14px; /* Réduction de la taille du texte dans l'historique */
-    line-height: 1; /* Réduction maximale de l'interlignage */
-    margin-bottom: 0.1em; /* Réduction minimale de l'espace entre les paragraphes */
-  }
-
-  .btn-action {
-    font-size: 12px; /* Réduction de la taille du texte des boutons */
-    padding: 6px; /* Réduction du padding des boutons */
-  }
-
-  #texte1, #texte2 {
-    font-size: 18px; /* Réduction de la taille du texte pour texte1 et texte2 */
-    width: 95%; /* Augmentation de la largeur pour utiliser plus d'espace */
-    padding: 2%; /* Réduction du padding */
-  }
-
-  #monGif {
-    max-width: 50px; /* Réduction supplémentaire de la taille du GIF */
-    margin-right: 10px; /* Réduction de l'espace à droite du GIF */
-  }
-
-  #boutons-container {
-    gap: 1px; /* Réduction de l'espace entre les boutons */
-  }
-
-  #entete {
-    height: 25px; /* Réduction de la hauteur de l'en-tête */
-  }
-
-  #nom-utilisateur-conteneur {
-    font-size: 16px; /* Réduction de la taille du texte du nom d'utilisateur */
-  }
-}
-
-/* Ajoutez ou modifiez ces règles dans votre media query existante */
-@media (max-width: 480px) and (max-height: 750px) {
-  #fenetre-dialogue {
-    width: 98%;
-    height: 78vh; /* Ajusté pour laisser de l'espace pour le header et une petite marge */
-    margin-top: 5px; /* Réduit encore la marge supérieure */
-  }
-
-  #chat2 {
-    height: 90%; /* Augment pour utiliser plus d'espace vertical */
-  }
-
-  #terminal {
-    height: 65vh; /* Ajusté pour s'adapter à la nouvelle hauteur de fenetre-dialogue */
-    padding: 0.5em; /* Réduit le padding pour gagner de l'espace */
-  }
-
-  #historique {
-    height: 85%; /* Ajusté pour laisser de l'espace pour les boutons */
-  }
-
-  #boutons-container {
-    margin-top: 5px; /* Réduit la marge au-dessus des boutons */
-  }
-
-  .btn-action {
-    padding: 5px; /* Réduit encore le padding des boutons */
-    font-size: 11px; /* Réduit encore la taille de la police des boutons */
-  }
-
-  body {
-    padding-top: 5px; /* Réduit le padding en haut du body */
-  }
-
-  header {
-    padding: 5px 0; /* Réduit le padding du header */
-  }
-
-  #logo {
-    font-size: 20px; /* Réduit encore la taille du logo */
-    margin-bottom: 2px; /* Réduit la marge en bas du logo */
-  }
-
-  nav {
-    margin-top: 2px; /* Réduit la marge au-dessus de la navigation */
-  }
-
-  nav ul li {
-    font-size: 11px; /* Réduit encore la taille du texte du menu */
-    margin: 0 2px; /* Réduit les marges entre les éléments du menu */
-  }
-}
-
-/* Augmentation de la taille du logo et des éléments du menu */
-@media (max-width: 480px) and (max-height: 750px) {
-  /* Augmentation de la taille du logo et des éléments du menu */
-  #logo {
-    font-size: 28px; /* Augmenté de 20px à 28px */
-  }
-
-  nav ul li {
-    font-size: 16px; /* Augmenté de 11px à 16px */
-  }
-
-  /* Ajustement du GIF si nécessaire */
-  #monGif {
-    max-width: 45px; /* Légèrement réduit si nécessaire */
-  }
-
-  /* Augmentation de la taille des boutons et du conteneur */
-  #boutons-container {
-    margin-top: 10px; /* Augmenté de 5px à 10px */
-    gap: 5px; /* Augmenté de 1px à 5px */
-  }
-
-  .btn-action {
-    padding: 10px; /* Augmenté de 5px à 10px */
-    font-size: 16px; /* Augmenté de 11px à 16px */
-  }
-
-  /* Augmentation de la taille du texte dans la fenêtre de dialogue */
-  #fenetre-dialogue {
-    font-size: 18px; /* Augmenté, ajustez selon vos préférences */
-  }
-
-  #terminal, #historique, #historique p {
-    font-size: 16px; /* Augmenté de 14px à 16px */
-    line-height: 1.2; /* Légèrement augmenté pour une meilleure lisibilité */
-  }
-
-  /* Ajustement de la taille du texte du nom d'utilisateur */
-  #nom-utilisateur-conteneur {
-    font-size: 18px; /* Augmenté de 16px à 18px */
-  }
-
-  /* Autres ajustements pour maintenir la mise en page */
-  #fenetre-dialogue {
-    height: 75vh; /* Légèrement réduit pour s'adapter aux boutons plus grands */
-  }
-
-  #chat2 {
-    height: 85%; /* Ajusté pour s'adapter à la nouvelle taille de fenetre-dialogue */
-  }
-
-  #terminal {
-    height: 60vh; /* Ajusté pour s'adapter à la nouvelle taille de fenetre-dialogue */
-  }
-}
-
-/* Modifications existantes... */
-
-@media (max-width: 480px) and (max-height: 750px) {
-  /* Modifications existantes... */
-
-  #boutons-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Retour à 3 colonnes */
-    gap: 5px; /* Augmente légèrement l'espace entre les boutons */
-    margin-top: 8px;
-    padding: 0 5px;
-  }
-
-  .btn-action {
-    padding: 10px 5px; /* Augmente le padding vertical pour des boutons plus hauts */
-    font-size: 14px; /* Augmente légèrement la taille de la police */
-    white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
-    height: auto; /* Permet aux boutons de s'ajuster à leur contenu */
-    min-height: 50px; /* Définit une hauteur minimale pour les boutons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.2; /* Ajuste l'interlignage pour une meilleure lisibilité */
-  }
-
-  /* Ajustements pour s'assurer que la fenêtre de dialogue s'adapte */
-  #fenetre-dialogue {
-    height: 68vh; /* Réduit légèrement la hauteur pour laisser plus d'espace aux boutons */
-  }
-
-  #chat2 {
-    height: 75%; /* Ajuste la hauteur du chat */
-  }
-
-  #terminal {
-    height: 52vh; /* Ajuste la hauteur du terminal */
-  }
-
-  /* Autres ajustements si nécessaire... */
-}
-
-@media (max-width: 480px) and (max-height: 750px) {
-  /* Autres styles existants... */
-
-  #fenetre-dialogue {
-    height: 80vh; /* Augmenté de 68vh à 80vh pour donner plus d'espace */
-  }
-
-  #chat2 {
-    height: 85%; /* Augmenté de 75% à 85% */
-  }
-
-  #terminal {
-    height: 70vh; /* Augmenté de 52vh à 70vh */
-    padding: 0.3em; /* Réduit légèrement le padding pour gagner de l'espace */
-  }
-
-  #historique {
-    height: 90%; /* Augmenté de 85% à 90% */
-    overflow-y: auto; /* Assure que le défilement est possible si le contenu dépasse */
-  }
-
-  #boutons-container {
-    margin-top: 3px; /* Réduit la marge au-dessus des boutons */
-  }
-
-  .btn-action {
-    padding: 8px 4px; /* Réduit légèrement le padding des boutons */
-    min-height: 40px; /* Réduit la hauteur minimale des boutons */
-    font-size: 12px; /* Réduit légèrement la taille de la police */
-  }
-
-  /* Ajustez d'autres éléments si nécessaire pour s'adapter à ces changements */
+  background-color: #222;
+  color: #77ff77;
+  border: 1px solid #77ff77;
 }
 
 .skip-intro {
   font-family: "VT323", monospace;
   color: #77ff77;
-  font-size: 14px; /* Taille plus petite que le bouton "Bonjour" */
+  font-size: 14px;
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
@@ -1173,47 +344,706 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 480px) and (max-height: 750px) {
-  /* Autres styles existants... */
+/* Media Queries */
+
+@media (min-width: 200px) {
+  html, body {
+    min-width: 200px;
+  }
+
+  #logo {
+    font-size: 25px;
+    letter-spacing: -0.05em;
+  }
+
+  #monGif {
+    max-width: 60px;
+    margin-right: 10px;
+  }
+
+  #introTitle {
+    font-size: 1.5em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%;
+    max-height: 40%;
+  }
+  #fenetre-dialogue {
+    width: 80%;
+    height: 80%;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #animation-container {
+    margin: 1px;
+  }
 
   #boutons-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px; /* Réduit légèrement l'espace entre les boutons */
-    margin-top: 6px;
-    padding: 0 4px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 8px;
+  }
+  .btn-action {
+    padding: 6px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    border: 1px solid #77ff77;
+  }
+
+  
+}
+@media (min-width: 360px) {
+  html, body {
+    min-width: 300px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)!important;
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
   }
 
   .btn-action {
-    padding: 8px 4px; /* Réduit légèrement le padding horizontal */
-    font-size: 14px; /* Augmente la taille de la police de 12px à 14px */
-    min-height: 45px; /* Augmente légèrement la hauteur minimale */
+    padding: 6px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  #monGif {
+    max-width: 70px;
+    margin-right: 10px;
+  }
+
+  #introTitle {
+    font-size: 1.5em;
+    letter-spacing: -0.03em;
+  }
+
+  #fenetre-dialogue {
+    width: 90%;
+    height: 80%;
+    margin-top: 5px;
+  }
+  #animation-container {
+    margin: 1px;
+  }
+
+}
+@media (min-width: 480px) {
+  body {
+    padding-top: 15px;
+    min-width: 380px;
+    min-height: 415px;
+  }
+
+
+  #chat2 {
+    height: 80%;
+  }
+
+  #logo {
+    font-size: 28px;
+    margin-bottom: 2px;
+  }
+
+  nav {
+    margin-top: 2px;
+  }
+
+  #monGif {
+    max-width: 70px;
+    margin-right: 10px;
+  }
+
+  #fenetre-dialogue {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #historique {
+    height: 88%;
+    overflow-y: auto; 
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  #boutons-container {
+    margin-top: 6px;
+    gap: 4px;
+    padding: 0 4px;
+  }
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .btn-action {
+    padding: 6px 4px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     line-height: 1.2;
-    white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
+    white-space: normal;
   }
 
-  /* Ajustements pour s'assurer que la fenêtre de dialogue s'adapte */
+  #nom-utilisateur-conteneur {
+    font-size: 18px;
+  }
+
+  #introTitle {
+    font-size: 2em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%;
+    max-height: 40%;
+  }
+}
+@media (min-width: 768px){
+
+  body {
+    line-height: 1.3;
+    padding-top: 20px;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  #logo {
+    font-size: 45px;
+  }
+
+  nav ul li {
+    font-size: 25px;
+    margin: 0 5px;
+  }
+
+  #texte1, #texte2 {
+    font-size: 24px;
+  }
   #fenetre-dialogue {
-    height: 78vh; /* Augmente légèrement la hauteur */
+    width: 90%;
+    height: 80%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  #animation-container {
+    margin-top: 30px;
   }
 
   #chat2 {
-    height: 82%; /* Ajuste la hauteur du chat */
-  }
-
-  #terminal {
-    height: 68vh; /* Ajuste la hauteur du terminal */
-    padding: 0.3em;
+    height: 75%;
   }
 
   #historique {
-    height: 88%; /* Ajuste la hauteur de l'historique */
-    overflow-y: auto;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+
+  #terminal {
+    height: 65vh;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+    .btn-action {
+    font-size: 20px;
+  }
+
+
+  #texte1, #texte2 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  #introTitle {
+    font-size: 2.5em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%!important;
+    max-height: 40%!important;
+    
+}
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+
+  #logo {
+    font-size: 44px;
+  }
+
+  nav ul li {
+    font-size: 22px;
+  }
+
+  #texte1, #texte2 {
+    font-size: 28px;
+  }
+
+  #fenetre-dialogue {
+    font-size: 22px;
+  }
+
+  #terminal {
+    font-size: 20px;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .btn-action {
+    font-size: 20px;
+  }
+
+  html, body {
+    min-width: 200px;
+  }
+
+  #logo {
+    font-size: 46px;
+  }
+
+  #introTitle {
+    font-size: 3em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%;
+    max-height: 40%;
+  }
+  #fenetre-dialogue {
+    width: 80%;
+    height: 80%;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  #animation-container {
+    margin: 1px;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 8px;
+  }
+  .btn-action {
+    padding: 6px;
+    font-size: 28px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    border: 1px solid #77ff77;
+  }
+ }
+  
+
+/* Media Queries archive 
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+
+  #logo {
+    font-size: 44px;
+  }
+
+  nav ul li {
+    font-size: 22px;
+  }
+
+  #texte1, #texte2 {
+    font-size: 28px;
+  }
+
+  #fenetre-dialogue {
+    font-size: 22px;
+  }
+
+  #terminal {
+    font-size: 20px;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .btn-action {
+    font-size: 20px;
   }
 }
 
+@media (min-width: 768px){
 
+  body {
+    line-height: 1.3;
+    padding-top: 20px;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  #logo {
+    font-size: 45px!important;
+  }
+
+  nav ul li {
+    font-size: 25px;
+    margin: 0 5px;
+  }
+
+  #texte1, #texte2 {
+    font-size: 24px;
+  }
+  #fenetre-dialogue {
+    width: 90%;
+    height: 80%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  #animation-container {
+    margin-top: 30px;
+  }
+
+  #chat2 {
+    height: 75%;
+  }
+
+  #terminal {
+    height: 65vh;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+    .btn-action {
+    font-size: 18px;
+  }
+
+
+  #texte1, #texte2 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  #introTitle {
+    font-size: 2.5em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%!important;
+    max-height: 40%!important;
+    
+}
+}
+
+@media (min-width: 480px) {
+  body {
+    padding-top: 15px;
+    min-width: 380px;
+    min-height: 415px;
+  }
+
+
+  #chat2 {
+    height: 80%;
+  }
+
+  #terminal {
+    height: 70vh;
+  }
+
+  .btn-action {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  #logo {
+    font-size: 28px;
+    margin-bottom: 2px;
+  }
+
+  nav {
+    margin-top: 2px;
+  }
+
+  #monGif {
+    max-width: 70px;
+    margin-right: 10px;
+  }
+
+  #fenetre-dialogue {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #historique {
+    height: 88%;
+    overflow-y: auto;
+  }
+
+  #boutons-container {
+    margin-top: 6px;
+    gap: 4px;
+    padding: 0 4px;
+  }
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .btn-action {
+    padding: 8px 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  #nom-utilisateur-conteneur {
+    font-size: 18px;
+  }
+
+  #introTitle {
+    font-size: 2em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%;
+    max-height: 40%;
+  }
+}
+
+@media (min-width: 360px) {
+  html, body {
+    min-width: 300px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)!important;
+    gap: 2px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .btn-action {
+    padding: 6px;
+    font-size: 14px!important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  #introTitle {
+    font-size: 1.5em;
+    letter-spacing: -0.03em;
+  }
+
+  #fenetre-dialogue {
+    width: 90%;
+    height: 80%;
+    margin-top: 5px;
+  }
+  #animation-container {
+    margin: 1px;
+  }
+
+}
+
+@media (min-width: 200px) {
+  html, body {
+    min-width: 200px;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  #introTitle {
+    font-size: 1.5em;
+    letter-spacing: -0.03em;
+  }
+
+  #introGif {
+    max-width: 40%;
+    max-height: 40%;
+  }
+  #fenetre-dialogue {
+    width: 80%;
+    height: 80%;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  #terminal {
+    height: 68vh;
+    padding: 0.3em;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #animation-container {
+    margin: 1px;
+  }
+
+  #boutons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 8px;
+  }
+  .btn-action {
+    padding: 6px;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    border: 1px solid #77ff77;
+  }
+
+  
+}
+*/
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #77ff77;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #77ff77;
+}
