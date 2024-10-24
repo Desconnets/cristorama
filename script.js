@@ -76,13 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       texte1.classList.remove("hidden");
-      animateText(texte1, "Bienvenue noble terrien !", 50, () => {
+      animateText(texte1, "Salut salut l'internaute d'internet !", 50, () => {
         setTimeout(() => {
           texte1.classList.add("hidden");
           setTimeout(() => {
             texte2.classList.remove("hidden");
             animateText(texte2,
-              "Rien de plus simple pour me connaître, il suffit juste de parler sur le chat qui va apparaître, je te remercie par avance de ton interêt pour ce nouveau projet qui, j'espère, me servira de tremplin pour découvrir de nouveaux horizons et collaborer avec des personnes créatives, ouvertes et inspirées !",
+              "Pour me connaître, il suffit jouer avec le joujou digital qui va apparaître, je te remercie par avance de ton interêt pour ce nouveau projet qui, j'espère, me servira de tremplin pour découvrir de nouveaux horizons et collaborer avec des personnes créatives, ouvertes et inspirées !",
               50,() => {
                 setTimeout(() => {
                   texte2.classList.add("hidden");
@@ -108,10 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gestion des interactions du chat
   const interactions = {
     welcome:
-      "\nSalut salut, je suis heureux de pouvoir parler avec vous, je vous écris depuis le passé. Pour être exact, il est onze heures du matin et nous sommes samedi premier juin 2024. \n \nBref, revenons à l’essentiel : l’I.N.F.O.R.M.A.T.I.O.N. \n \nÀ travers ce chat, on pourra converser par le biais de mots clés qui vont vous donner des informations sur moi !\n \nLes mots-clés, sont au en bas clickez sur eux pour obtenir des informations ! ",
+      "\n \nSalut salut, je suis super heureux de pouvoir parler avec vous, je vous écris depuis le passé. Pour être exact, il est onze heures du matin et nous sommes samedi premier juin 2024. Un passé proche, évidemment, qui donne des airs de retour dans le futur à cette expérience, vous voyez ce que je veux dire ?\n \nÀ travers ce chat, on pourra converser par le biais de mots clés !\n\nCliquez et obtenez des infos  ! ",
     commands: {
       agence: "Brandie est une agence de communication basée à Montpellier, dans le sud de la France ! Chez Brandie depuis 2021, j’ai développé des connaissances solides de LinkedIn et je travaille avec des clients variés, autant dans le privé que dans le public, surtout dans l’ingénierie et la culture. Mes missions incluent l’écriture, la création de contenus audiovisuels, la publication de posts sur les réseaux sociaux, l'élaboration de stratégies digitales, le conseil et l’analyse de performances, entre autres. ",
-      formations:  "Fac de sciences puis fac de lettres \n - 2011 : bac sciences \n - 2016 : licence sciences du langage \n - 2018 : master 1 humanités numériques",
+      formations:  "J’ai une formation de base, scientifique, sauce physique et chimie ! J’ai obtenu une licence et un master 1 en sciences du langage, communication, média et médiation numérique à l’Université Paul Valéry ! J’ai effectué également plusieurs formations en initiation au web et en montage audio et vidéo. ",
       bio: "Né pendant le boom internet et issu de la génération Game boy, eMule, iPod et Skyblog, je suis un passionné de pop-culture, de sciences et des techs rétro. Aujourd'hui, fort de mes sept ans d’expérience en social media management et en relation public, je suis un fin connaisseur des TIC, un explorateur du pixel, un geek de l’info.",
       expériences: "Content-Manager & Social Media Manager chez Brandie, agence de communication à Montpellier de 2021 à aujourd'hui ! Pour en savoir plus sur mes missions, cliques sur Agence.\n \nSocial Media Manager, Chargé des Partenariats Médias & des Relations Presse au Festival Radio France Montpellier de 2017 à 2021 !\n \nPour en savoir plus sur mes missions, cliques sur Radio France.\n \nAutres : tape Stage pour connaître mes expériences de stagiaire.",
       projets: "Je suis dans une agence de com.",
