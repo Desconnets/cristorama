@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => {
             texte2.classList.remove("hidden");
             animateText(texte2,
-              "Pour me connaître, il suffit jouer avec le joujou digital qui va apparaître, je te remercie par avance de ton interêt pour ce nouveau projet qui, j'espère, me servira de tremplin pour découvrir de nouveaux horizons et collaborer avec des personnes créatives, ouvertes et inspirées !",
+              "Pour me connaître, il suffit de jouer avec le joujou digital qui va apparaître, je te remercie par avance de ton interêt pour ce nouveau projet qui, j'espère, me servira de tremplin pour découvrir de nouveaux horizons et collaborer avec des personnes créatives, ouvertes et inspirées !",
               50,() => {
                 setTimeout(() => {
                   texte2.classList.add("hidden");
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gestion des interactions du chat
   const interactions = {
     welcome:
-      "\n \nSalut salut, je suis super heureux de pouvoir parler avec vous, je vous écris depuis le passé. Pour être exact, il est onze heures du matin et nous sommes samedi premier juin 2024. Un passé proche, évidemment, qui donne des airs de retour dans le futur à cette expérience, vous voyez ce que je veux dire ?\n \nÀ travers ce chat, on pourra converser par le biais de mots clés !\n\nCliquez et obtenez des infos  ! ",
+      "\n \nSalut salut, je suis super heureux de pouvoir parler avec vous, je vous écris depuis le passé. Pour être exact, il est onze heures du matin et nous sommes samedi premier juin 2024. Un passé proche, évidemment, qui donne des airs de retour vers le futur à cette expérience. Vous voyez ce que je veux dire ?\n \nÀ travers ce chat, on pourra converser par le biais de mots clés !\n\nCliquez et obtenez des infos  ! ",
     commands: {
       agence: "Brandie est une agence de communication basée à Montpellier, dans le sud de la France ! Chez Brandie depuis 2021, j’ai développé des connaissances solides de LinkedIn et je travaille avec des clients variés, autant dans le privé que dans le public, surtout dans l’ingénierie et la culture. Mes missions incluent l’écriture, la création de contenus audiovisuels, la publication de posts sur les réseaux sociaux, l'élaboration de stratégies digitales, le conseil et l’analyse de performances, entre autres. ",
       formations:  "J’ai une formation de base, scientifique, sauce physique et chimie ! J’ai obtenu une licence et un master 1 en sciences du langage, communication, média et médiation numérique à l’Université Paul Valéry ! J’ai effectué également plusieurs formations en initiation au web et en montage audio et vidéo. ",
